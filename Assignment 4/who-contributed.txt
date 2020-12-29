@@ -1,0 +1,9 @@
+Steps:
+I used git grep to search for the quote "Even newspaper reports present contradictory information".  This showed me which text file this was in. I found that it was in the northamerica file so I used the command:
+git log --source -S "Even newspaper reports present contradictory information" --northamerica
+
+this showed all the information I needed to answer the question regarding the author and time of commit. 
+
+
+What I found:
+I found the statement "Even newspaper reports present contradictory information". It was commited on Thursday Decemeber 21, 1995 at 11:43:42 by David Olson. 

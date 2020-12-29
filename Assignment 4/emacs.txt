@@ -1,0 +1,3 @@
+There were a few key differences between Paul Eggerts and Savannah's repositories. The ones I found were the number of commits and the branch counts. To see information about the commits I used the command:
+git rev-list --all --count. 
+This showed me that emacs repo for Savannah had 19444 commits while Egger had a few hundred less, 149396. In addiiton, I only foudn the master branch for Savannahs version. When I looked at Eggers, I saw many other branches. 
