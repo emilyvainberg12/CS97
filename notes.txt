@@ -1,17 +1,14 @@
-Questions to Lab 1.5- Exploring the operating system outside Emacs
+Lab 2.1
+To compute: (expt 2 ( expt 3 4 ));
+C-h k C-h k: C-h k tells you what a function does, so writing it twice simply explains the function. 
+C-h k M-SPC: This command says the function of M-SPC is to make one space, so it takes out all the other spaces. 
+M-SPC: When I ran this command my sentence became one long time of words.
 
-1. You can use the mv prgram when you are in a directory and want to either move files in a different directory or moves files from the current directory out of the current directory. The sh is just a shell command. Similar to running unix or bash, you can type sh when you are not inside a certain file and it will change to the sh terminal setting. You can exit our of this by simply typing exit. 
-2. I found three commands. ar lets you create and edit archives. pr prints text files. and finally tr, is used to translate characters. 
-3. When you type /usr/bin/emacs it opens up the help emacs buffer with some basic commands available in emacs. It also shows the version of GNU emacs currently being used. 
-4. The version of the plain gcc program is 10.2.0. The version of the gcc connect with /usr/bin is 4.8.5 20150623  
-5. chmod u+sx means it lets others execute the file. chmod o-w means that it takes away writing permissions from others. 
-6. I did this and it found hundreds of directeries that I modified in the last four weeks.
-7. I have 290 files in the same directory that contain symbolic links. 
-8. The oldest regular file is called yp and it was modified Sept 23.
-9. locale gets its command data from the current directory. 
-10. There is the command 'M-x downcase-word' this makes all the letters lowercase. In addition there is the command 'M-x downcase-region' this lets you highlight a certain region and make all the letters lowercase. 
-11. C-M-v lets you switch to the next page of your file without having to use your cursor to scroll down line by line. The emac keystrokes C-M-r giove you the ability to search backwards though your code/file. 
-12. The keystrokes C-g cancel any action or command you may have just entered or ran. 
-13. The emacs yank function leaves your cursor at the end of the inserted text. It does this because it inserts the most recent kill. It is very easily invoked since you just need to type C-y. 
-14. The dired command lists the subdirectories and the directories in emacs. the ls -l command only lists the files and the modified date, as well as any resristions and premissions on the file. 
+Lab 2.2
+M-x what-line: checks what number line your cursor is currently on.
 
+Python Scripting
+When the script is invoked on an empty file like /dev/null it says that the buffer is read only and doesn't let thescript be run or opened. 
+When I run the file with python2 (just typing python), with my notes.txt file, it outputs "Lab 2.2". This is one of the section headers in that file.  
+When I run the file with python3, it says that there is an IOError and I have invalid syntax in line 65. 
+When I run shuf.py with python3, it has the same error message as with the previous line. It says there is an IOError becuase of invalid syntax.
