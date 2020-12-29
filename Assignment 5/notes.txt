@@ -1,0 +1,65 @@
+Make Check
+For the simple test I checked that if I ran ./randall with the first argument beign 100- 
+it would print out 100 words. I checked this by using the commaned wc -c. And created an 
+if statement that checked if ./randall 100 had a wc of 100.
+I added the check: at the bottom of the Makefile.
+
+Splitting the Randall File
+Options: To implement the options, file I had to make some changes in the code. I created 
+a function called read_options and made a struct out of it so the data is much more 
+accessible thoughout the file. Beacause of this struct, opts, I had to go back to the 
+randall.c file and change all the nbytes to: opts->nbytes. 
+
+Outputs:
+The outputs file was probably the easiest to implement. I just moved the writebytes 
+function into the .c file and made sure to declare the function in the .h file. I made 
+sure to add the header files in the randall.c so that function was accessible for the 
+rest of the code. 
+
+Hardware/Software:
+I copied all the hardware implementation from the randall.c file and moved it into 
+rand64-hw.c I made sure to include all the header files so that all the functions would 
+work. As
+
+Adding the -i and -o feature
+For the -i feature:
+I added this feature in the options.c function called read options. I made a switch 
+statement with one of the cases being 'i'. If this is called then and the comparion is 
+true: (strcmp("rdrand", optarg) == 0) then the input for the opts struct because RDRAND. 
+This is the hardware random-number generation supported by x86-64 processors
+
+For the -o feature:
+implementing the -o feature was the same as the -i feature except for two minor changes. 
+First I strcmp optarg with "stdout". And secondly I change the OUTPUT to equal STDOUT. If 
+this is not specificed the 'N' is used which Output N KiB bytes at a time, using the 
+write system call. 
+
+
+Timing my Implementation
+When I ran: time ./randall 133562368 >/dev/null
+My results were:
+real	0m2.939s
+user	0m2.920s
+sys	0m0.018s
+
+When I ran: time ./randall 133562368 | cat >/dev/null
+My results were:
+real	0m3.184s
+user	0m3.150s
+sys	0m0.209s
+
+When I ran: time ./randall 133562368 >rand.data 
+My results were:
+real	0m5.936s
+user	0m3.081s
+sys	0m0.141s
+
+When I ran the santiy check to test whether I was in the right ballpark my output was:
+t=16384 >/dev/null
+16384+0 records in
+16384+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 0.924902 s, 145 MB/s
+
+real	0m0.929s
+user	0m0.023s
+sys	0m0.905s
