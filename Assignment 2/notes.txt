@@ -1,0 +1,14 @@
+Lab 2.1
+To compute: (expt 2 ( expt 3 4 ));
+C-h k C-h k: C-h k tells you what a function does, so writing it twice simply explains the function. 
+C-h k M-SPC: This command says the function of M-SPC is to make one space, so it takes out all the other spaces. 
+M-SPC: When I ran this command my sentence became one long time of words.
+
+Lab 2.2
+M-x what-line: checks what number line your cursor is currently on.
+
+Python Scripting
+When the script is invoked on an empty file like /dev/null it says that the buffer is read only and doesn't let thescript be run or opened. 
+When I run the file with python2 (just typing python), with my notes.txt file, it outputs "Lab 2.2". This is one of the section headers in that file.  
+When I run the file with python3, it says that there is an IOError and I have invalid syntax in line 65. 
+When I run shuf.py with python3, it has the same error message as with the previous line. It says there is an IOError becuase of invalid syntax.
