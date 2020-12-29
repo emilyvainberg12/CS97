@@ -1,5 +1,0 @@
-#!/bin/sh
-
-tr -cs '0-9A-Za-z[:punct:]' '[\n*]'| sort -u | comm -23 - sorted.words
-
-
