@@ -1,0 +1,30 @@
+Set Up
+To begin making a tic-tac-toe app, you must have Node.js set up on your computer. Create the CSS and JS file in your source folder to set up the initial tic tac toe box. The CSS code designs the three by three box and sets all the margins and font sizes. 
+
+Interactive Component
+To have the squares fill up with X's and O's when they are pressed, you have to change the reder() function for the square. There is a funciton called onClick, that activates the button which does this. 
+To pass data though the app, writing 'value={i}' allows you to pass in a value, 'i' that you want to show up on the screen. 
+Before implelemting the X's and O's, simply try to enter the numebrs 0-8 in the eight squares. 
+The function 'onClick' allows you to have the value passed in appeared only once you click on the corresponding square. Write the same code for both the Sqaure and the Circle component so they each appear when it is pressed for their respective turns. 
+
+Constructor
+Code a copy constructor that initializes the nine squares to null at the beginnign of the game. Do this by going to the Board class and adding this line of code:this.state = {squares: Array(9).fill(null),}; 
+
+Function Component/ Switching Turns
+Now the most important thing is for the game to be played by two people. 
+So the X's and O's must take turns switching. Go to the handleClick section and add array of squares that can either be 'X' or 'O'. 
+Since X goes first, make a boolean statement that sets XisNext to True. Then create a conditional statement. If X is Next is true, then set it to false and print out the letter 'O'. 
+If XisNext is not true, that means O just went. So switch the statement to true and make it X's turns. 
+This continues throughtout the game to ensure the turns keep switching. The Code for the conditional if statement it:  squares[i] = this.state.xIsNext ? 'X' : 'O';
+To ensure that the turns keep switchin, you need to make some minor changes in the reder() function found in the Board Component.
+ Simply change the 'status' from the sample code to the XisNext statement. This will display the turn at the top of the page so the players will know whose turn it currently is. 
+
+Declaring a Winner
+The final thing to do is write an algorithm to declare the winner or to declare a tie once the game is over Simply change the 'status' from the sample code to the XisNext statement. This will display the turn at the top of the page so the players will know whose turn it currently is. 
+There was a given helper function in the react tutorial to determine if there is ever a winner during the game. 
+The function simply writes out all the combinations of when there could be three in a row for a 9 box square. There are eight possibiliies. This is because there are 3 horizontal, 3 vertial, and 2 digonal possibilites. Then after every round it loops through these boxes and sees if there are ever all X's or all O's in any of the winner combinations. 
+The funciton will then return the winner. The render function is then changed so it can recieve the data from the helper function and announce a winner if there is one. 
+
+After implimenting all of these functions into your code, you should have a working tic tac toe game.
+
+
